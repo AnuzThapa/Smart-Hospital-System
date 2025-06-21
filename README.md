@@ -28,7 +28,7 @@ eHospital is a comprehensive healthcare management system designed to streamline
 
 MedGemma is a powerful local large language model specialized in medical data. It supports both **image** and **text** inputs and has been trained to interpret medical images, such as X-rays, enabling smart diagnostics directly integrated into the platform.
 
-![MedGemma Demo](./assets/medgemma-demo.png)  <!-- Replace with your MedGemma demo image -->
+![MedGemma Demo](./images/ai.png)  <!-- Replace with your MedGemma demo image -->
 
 ---
 
