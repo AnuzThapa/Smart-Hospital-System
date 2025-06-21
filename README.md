@@ -32,19 +32,17 @@ MedGemma is a powerful local large language model specialized in medical data. I
 
 ---
 
-## 📸 Screenshots
+## 📸 Features
 
-### User Dashboard
-
-![User Dashboard](./assets/user-dashboard.png)
+### User & Doctor Dashboard
 
 ### Appointment Scheduling
 
-![Appointment Scheduling](./assets/appointment-scheduling.png)
+### Authentication
 
 ### AI-powered Image Analysis
 
-![AI Image Analysis](./assets/ai-image-analysis.png)
+
 
 ---
 
@@ -72,3 +70,13 @@ MedGemma is a powerful local large language model specialized in medical data. I
    ```bash
    git clone https://github.com/YourUsername/eHospital.git
    cd eHospital
+   ```
+### LMStudio Setup
+1.Install and setup LMstudio for window or mac
+2.install the hugging face model
+3.load the selected model for use
+4.run the command in command prompt
+```bash
+lms server start
+```
+
