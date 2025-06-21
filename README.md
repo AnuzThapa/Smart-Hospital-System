@@ -1,6 +1,6 @@
 # eHospital - Smart Healthcare Management System
 
-![eHospital Banner](./assets/banner.png)  <!-- Replace with your banner image -->
+![eHospital Banner](./images/home.png)  <!-- Replace with your banner image -->
 
 ---
 
