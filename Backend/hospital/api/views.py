@@ -145,36 +145,37 @@ class AiModelView(APIView):
             prompt = serializer.validated_data['query']
             image = serializer.validated_data.get('image', None)
             model_path = "medgemma-4b-it"
-            
-            model=lms.llm(model_path)
-
-            # image_path="input/radiology.jpg"
-
-            image_handle=lms.prepare_image(image)
-
-            system_prompt=""" you are a highly skilled AI assistant specialized in radiology. You support radiologists and medical
-
-            Guidelines:
-
-            1. Be accurate,concise, and clinically relevant.
-            2. User proper radiologic terms (e.g."hypodense" "ground-glass opacity").
-            3. Do not guess-flag when input lacks detail.
-            4. Include differentials or next steps when appropriate.
-
-            Tone: Confident,professional, and precise
-
-            Limitations: No final diagnoses or treatment plans without full clinical context.
-            """
-
-            chat=lms.Chat(system_prompt)
-            chat.add_user_message("What is your opinion about this image?",images=[image_handle])
             try:
+            
+                model=lms.llm(model_path)
+
+                system_prompt=""" you are a highly skilled AI assistant specialized in radiology. You support radiologists and medical
+
+                Guidelines:
+
+                1. Be accurate,concise, and clinically relevant.
+                2. User proper radiologic terms (e.g."hypodense" "ground-glass opacity").
+                3. Do not guess-flag when input lacks detail.
+                4. Include differentials or next steps when appropriate.
+
+                Tone: Confident,professional, and precise
+
+                Limitations: No final diagnoses or treatment plans without full clinical context.
+                """
+
+                chat=lms.Chat(system_prompt)
+                if image is not None:
+                    image_handle = lms.prepare_image(image)
+                    chat.add_user_message("What is your opinion about this image?", images=[image_handle])
+                else:
+                    chat.add_user_message(prompt)
+                    
                 def extract_response_text(prediction):
-                    for attr in ['output', 'result', 'message', 'content']:
-                        value = getattr(prediction, attr, None)
-                        if isinstance(value, str):
-                            return value
-                    return str(prediction)
+                        for attr in ['output', 'result', 'message', 'content']:
+                            value = getattr(prediction, attr, None)
+                            if isinstance(value, str):
+                                return value
+                        return str(prediction)
 
 
                 response = model.respond(chat)
