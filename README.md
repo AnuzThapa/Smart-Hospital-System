@@ -72,10 +72,10 @@ MedGemma is a powerful local large language model specialized in medical data. I
    cd eHospital
    ```
 ### LMStudio Setup
-1.Install and setup LMstudio for window or mac
-2.install the hugging face model
-3.load the selected model for use
-4.run the command in command prompt
+- Install and setup LMstudio for window or mac
+- install the hugging face model
+- load the selected model for use
+- run the command in command prompt
 ```bash
 lms server start
 ```
