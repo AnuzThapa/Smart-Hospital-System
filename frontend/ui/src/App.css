@@ -1,0 +1,391 @@
+
+        /* App.css */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html, body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+          line-height: 1.5;
+          width: 100%;
+          height: 100%;
+          overflow-x: hidden;
+        }
+
+        #root {
+          width: 100%;
+          min-height: 100vh;
+        }
+
+        .app-container {
+          position: relative;
+        }
+        /* .desktop-title-logo{
+          position:absolute;
+          left:2rem;
+        
+        }
+         .desktop-logo {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          color:#fff;
+       
+        }
+
+        .desktop-logo-icon {
+          width: 2.5rem;
+          height: 2.5rem;
+          background-color: #3b82f6;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+          position:relative;
+        }
+
+        .desktop-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+        
+          color:#2778fb;
+          z-index:10;
+        }
+
+        .desktop-close {
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          background: none;
+          border: none;
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          display: none;
+        }  */
+
+          .logo-container {
+            display: flex;
+            /* align-items: center; */
+            position:absolute;
+            left:2rem;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            /* background: linear-gradient(135deg, #2196F3, #1565C0); */
+            background: linear-gradient(135deg, #2563eb, #1d4ed8, #4338ca);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover .logo-icon {
+            transform: rotate(5deg) scale(1.05);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        .medical-cross {
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+
+        .medical-cross::before,
+        .medical-cross::after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .medical-cross::before {
+            width: 20px;
+            height: 4px;
+            top: 8px;
+            left: 0;
+        }
+
+        .medical-cross::after {
+            width: 4px;
+            height: 20px;
+            top: 0;
+            left: 8px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            /* color: #2c3e50; */
+            color:#2563eb;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text .e-prefix {
+            color: #2196F3;
+            font-style: italic;
+        }
+
+        /* .nav-items {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        } */
+
+        /* .nav-item {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: #2196F3;
+        } */
+
+        .logo-showcase {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .showcase-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+
+        .mobile-header {
+          background-color: white;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          padding: 1rem;
+          position: relative;
+          z-index: 30;
+          display: flex;
+        }
+
+        .mobile-header-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .mobile-menu-btn {
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+
+        .mobile-menu-btn:hover {
+          background-color: #f3f4f6;
+        }
+
+        .mobile-logo {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .mobile-logo-title {
+          font-size: 1.25rem;
+          font-weight: bold;
+          color: #1f2937;
+        }
+
+        .mobile-auth-buttons {
+          display: flex;
+          gap: 0.5rem;
+        }
+
+        .mobile-auth-btn {
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem;
+          font-size: 0.875rem;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        .mobile-login-btn {
+          background-color: transparent;
+          color: #2563eb;
+          border: 1px solid #2563eb;
+        }
+
+        .mobile-login-btn:hover {
+          background-color: #eff6ff;
+        }
+
+        .mobile-register-btn {
+          background-color: #2563eb;
+          color: white;
+        }
+
+        .mobile-register-btn:hover {
+          background-color: #1d4ed8;
+        }
+
+        .desktop-header {
+          display: none;
+          position: fixed;
+          top: 0;
+          right: 0;
+          padding: 1rem 2rem;
+          z-index: 60;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+          width: 100%;
+        }
+
+        .desktop-header-content {
+          display: flex;
+          /* justify-content: flex-end; */
+          justify-content:space-between;
+          max-width: 1200px;
+          width:100%;
+          margin-left: auto;
+        }
+
+        .desktop-auth-buttons {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+
+        .desktop-auth-btn {
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        .desktop-login-btn {
+          background-color: transparent;
+          color: #2563eb;
+          border: 2px solid #2563eb;
+        }
+
+        .desktop-login-btn:hover {
+          background-color: #eff6ff;
+          transform: translateY(-1px);
+        }
+
+        .desktop-register-btn {
+          background-color: #2563eb;
+          color: white;
+          box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+        }
+
+        .desktop-register-btn:hover {
+          background-color: #1d4ed8;
+          transform: translateY(-1px);
+          box-shadow: 0 6px 8px -1px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (min-width: 1024px) {
+          .mobile-header {
+            display: none;
+          }
+          
+          .desktop-header {
+            display: block;
+          }
+          
+          .main-container {
+            padding-top: 5rem;
+          }
+        }
+ 
+
+
+.desktop-search-container {
+  flex: 1;
+  max-width: 600px;
+  /* margin: 0 auto; */
+  margin-right:210px;
+  padding: 0 2rem;
+
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.search-wrapper:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: #fff;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #334155;
+  outline: none;
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.search-button {
+  padding: 10px 16px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-right: 2px;
+  border-radius: 50px;
+}
+
+.search-button:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.search-button:active {
+  transform: scale(0.98);
+}
+
+.search-button svg {
+  width: 18px;
+  height: 18px;
+}
