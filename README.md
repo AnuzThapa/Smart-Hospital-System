@@ -46,7 +46,7 @@ MedGemma is a powerful local large language model specialized in medical data. I
 
 ---
 
-## 🚀 Features
+## 🚀Detailed Features
 
 - **User Registration & Login** with JWT authentication  
 - **Appointment Handling** for patients and doctors  
